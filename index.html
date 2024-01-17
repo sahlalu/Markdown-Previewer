@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Previewer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Editor</h3>
+        <textarea id="editor"># Heading 1
+## Heading 2
+[Link](https://www.example.com)
+`Inline Code`
+- List Item
+> Blockquote
+![Image](https://via.placeholder.com/150)
+**Bold Text**
+        </textarea>
+        <button class="btn btn-primary mt-2" onclick="clearEditor()">Clear Editor</button>
+        <label class="switch mt-2">
+          <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+          <span class="slider round"></span>
+        </label>
+        <small class="text-muted">Dark Mode</small>
+      </div>
+      <div class="col-md-6">
+        <h3>Preview</h3>
+        <div id="preview"></div>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
